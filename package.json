@@ -1,0 +1,59 @@
+{
+  "name": "payment-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "Put website url",
+  "repository": {
+    "type": "git",
+    "url": "put github url"
+  },
+  "bugs": {},
+  "engines": {
+    "node": ">=12.13.0 <13.0.0",
+    "npm": ">=6.12.0 <7.0.0"
+  },
+  "scripts": {
+    "start:dev": "set NODE_ENV=development && nodemon ./bin/www",
+    "start:debug": "nodemon --inspect .",
+    "start:prod": "set NODE_ENV=production && pm2 start ecosystem.config.js",
+    "test": "jest"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "nodemon": "^1.19.4",
+    "prettier": "1.18.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --no-ignore --fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
+  "dependencies": {
+    "convict": "^6.0.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5",
+    "stripe": "^8.119.0",
+    "uuid": "^8.3.1"
+  }
+}
