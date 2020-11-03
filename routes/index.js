@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
 require("dotenv").config();
-const { Products, config, User } = require("../config/database");
+//const { Products, config, User } = require("../config/database");
 var passport = require("passport");
-var auth = require("../config/auth");
-const { Op } = require("sequelize");
+// var auth = require("../config/auth");
+// const { Op } = require("sequelize");
 // UUID to generate unique key
 const { v4: uuid } = require("uuid");
 
 // WARNING: Add a Stripe Key
-const stripe = require("stripe")(config.get("SECRET_KEY"));
+//const stripe = require("stripe")(config.get("SECRET_KEY"));
 
 //post register
 router.post("/register", async function(req, res) {
@@ -57,7 +57,7 @@ router.post("/register", async function(req, res) {
     }
     return false;
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return res.json({
       error: true,
       message: "Internal Server Error",
@@ -105,6 +105,6 @@ router.get("/Logout", function(req, res) {
 });
 /* GET home page. */
 router.get("/", function(req, res, next) {
-  res.render("index", { title: "Express", PublicKey: config.get("PUBLISHABLE_KEY") });
+  res.render("index", { title: "Express" });
 });
 module.exports = router;
