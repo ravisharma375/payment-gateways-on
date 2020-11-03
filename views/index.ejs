@@ -1,58 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Buy cool new product</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="#" />
-    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
-    <script src="https://js.stripe.com/v3/"></script>
-  </head>
+<head>
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <body>
-    <section>
-      <div class="product">
-        <img src="https://i.imgur.com/EHyR2nP.png" alt="The cover of Stubborn Attachments" />
-        <div class="description">
-          <h3 id="">Stubborn Attachments</h3>
-          <h5>$20.00</h5>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+       
+        
+
+        #navbar button
+        {
+            background-color: black;
+            margin-left: 0px;
+            border-radius: 5px;
+        }
+        #navbar button span
+        {
+            color: white;
+            font-weight: 900;
+            font-size: 18px;
+            border-radius: 2px;
+        }
+        * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+    <div class="container mt-3">
+    <div id="navbar" style="margin-top:25px">
+        <button>
+            <span>ShreeOnline</span>
+        </button>
+        <button style="background-color: white;margin-left: 20px">
+            <span style="color: black" >Contact</span>
+        </button>
+        <!-- <button type="button" onclick="Window.location.href='home.html'" data-toggle="modal" data-target="#mymodal" style="float:right; margin-right:20px">
+            <span>Login</span>
+        </button>
+ -->
+
+ <a href="login.html" class="btn btn-primary" style="float: right; margin-right:20px;">login.html</a>
+
+
+    </div>
+
+    <hr/>
+    
+    <div class="row" style="margin-top: 20px;">
+        <div class="column">
+            <img src=".\image\image1.jpeg" style="max-height:250px; max-width: 320px;">
+            <div>
+                <span style="font-weight: bold;font-size: 18px;">SwiftUI Mastery Travel Discovery</span>
+                <button style="margin-left:60px;border-radius: 10px;background-color:#abedad ">$114</button>
+            </div>
         </div>
-      </div>
-      <button id="checkout-button">Checkout</button>
-    </section>
-  </body>
-  <script type="text/javascript">
-    // Create an instance of the Stripe object with your publishable API key
-    const stripe = Stripe("<%= PublicKey %>");
-    var checkoutButton = document.getElementById("checkout-button");
-    checkoutButton.addEventListener("click", function(e) {
-      e.preventDefault();
-      fetch("/create-session", {
-        method: "POST",
-      })
-        .then(function(response) {
-          console.log(response);
-          return response.json();
-        })
-        .then(function(session) {
-          return stripe.redirectToCheckout({ sessionId: session.id });
-        })
-        .then(function(result) {
-          console.log(result);
-          // If redirectToCheckout fails due to a browser or network
-          // error, you should display the localized error message to your
-          // customer using error.message.
-          if (result.error) {
-            alert(result.error.message);
-          }
-        })
-        .catch(function(error) {
-          console.error("Error:", error);
-        });
-    });
-  </script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <div class="column">
+          <img src=".\image\image4.jpeg" style="max-height:250px; max-width: 320px;">
+          <div>
+            <span style="font-weight: bold;font-size: 18px;">AppStore JSON APIs</span>
+            <button style="margin-left:100px;border-radius: 10px; background-color: #abedad">$102</button>
+          </div>
+        </div>
+        <div class="column">
+            <img src=".\image\image3.jpeg" style="max-height:250px; max-width: 320px;">
+            <div>
+                <span style="font-weight: bold;font-size: 18px;">Maps UIKit SwiftUI</span>
+                <button style="margin-left:140px;border-radius: 10px;background-color: #abedad" >$110</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!--  -->
+
+    <div class="row" style="margin-top: 20px;">
+        <div class="column">
+            <img src=".\image\image2.jpeg" style="max-height:250px; max-width: 400px; ">
+            <div>
+                <span style="font-weight: bold;font-size: 18px;">Full stack ios course</span>
+                <button style="margin-left:160px;background-color: #abedad; border-radius: 10px;">$100</button>
+            </div>
+        </div>
+        <div class="column">
+          <img src=".\image\image5.jpeg" style="max-height:250px; max-width: 400px;">
+          <div>
+            <span style="font-weight: bold;font-size: 18px;">Contacts DiffableDataSource</span>
+            <button style="margin-left:60px;background-color: #abedad;border-radius: 10px">$114</button>
+          </div>
+        </div>
+        <div class="column">
+            <img src=".\image\image8.png" style="max-height:250px; max-width:400px;">
+            
+        <div>
+            <span style="font-weight: bold;font-size: 18px;">Lets buils simple calculator in ios</span>
+            <button style="margin-left:60px;background-color: #abedad;border-radius:10px;">$89</button>
+        </div>
+        </div>
+        
+    </div>
+    <hr>
+    <div>
+        <a href="privacy.html" style="margin-left: 400px;cursor: pointer;">privacy policy</a>
+        <a href="term.html" style="margin-left:500px;cursor: pointer;">term and condtion</a>
+    </div>
+    </div>
+</body>
 </html>

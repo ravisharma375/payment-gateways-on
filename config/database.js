@@ -1,6 +1,7 @@
 const { Sequelize } = require("sequelize");
 const { config } = require("./index");
 const productModel = require("../model/product");
+const userModel = require("../model/user");
 const sequelize = new Sequelize(
   config.get("DATABASE_NAME"),
   config.get("DATABASE_USERNAME"),
@@ -25,7 +26,7 @@ const sequelize = new Sequelize(
   },
 );
 const Products = productModel(sequelize, Sequelize);
-
+const User = userModel(sequelize, Sequelize);
 if (process.env.NODE_ENV === "development") {
   sequelize
     .sync({ force: false })
@@ -56,4 +57,5 @@ module.exports = {
   config,
   sequelize,
   Products,
+  User,
 };

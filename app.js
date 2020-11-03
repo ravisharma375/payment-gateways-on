@@ -7,7 +7,7 @@ const logger = require("morgan");
 const session = require("express-session");
 
 const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
+const paymentGateway = require("./routes/paymentGateway");
 
 const app = express();
 
