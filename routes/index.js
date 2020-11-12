@@ -162,6 +162,14 @@ router.post("/create-session", async (req, res) => {
   console.log(session);
   res.json({ id: session.id });
 });
-
-console.log(process.env.PORT);
+router.get("/term", (req, res) => {
+  return res.render("layout", {
+    page: "term",
+  });
+});
+router.get("/upcoming", (req, res) => {
+  return res.render("layout", {
+    page: "upcoming",
+  });
+});
 module.exports = router;

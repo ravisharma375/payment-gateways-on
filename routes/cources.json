@@ -21,17 +21,32 @@
     "Name": "Learn Objective with C",
     "ImgUrl": "images/I2.jpg",
     "Price": "119",
-    "Description": ["hello", "hello"],
-    "courseFor": ["hello", "hello"],
-    "Requirements": ["hello", "hello"]
+    "Description": [
+      "An App Is Built from a Network of Objects When building apps for OS X or iOS, youтАЩll spend most of your time working with objects. Those objects are instances of Objective-C classes, some of which are provided for you by Cocoa or Cocoa Touch and some of which youтАЩll write yourself. If youтАЩre writing your own class, start by providing a description of the class that details the intended public interface to instances of the class. This interface includes the public properties to encapsulate relevant data, along with a list of methods. Method declarations indicate the messages that an object can receive, and include information about the parameters required whenever the method is called. YouтАЩll also provide a class implementation, which includes the executable code for each method declared in the interface..",
+      "Objective-C is a general-purpose, object-oriented programming language that adds Smalltalk-style messaging to the C programming language."
+    ],
+    "courseFor": [
+      "You want to explore the limits of objective with C",
+      "You want to build applications quickly and correctly",
+      "You want to learn about Reactive State Programming",
+      "This is the main programming language used by Apple for the OS X and iOS operating systems and their respective APIs, Cocoa and Cocoa Touch. This reference will take you through simple and practical approach while learning Objective-C Programming language"
+    ],
+    "Requirements": ["Xcode 12+", "Some basic understanding of SwiftUI", "JSON Fetching"]
   },
   {
     "Id": "3",
     "Name": "Full Crash Course",
     "ImgUrl": "images/I9.png",
     "Price": "98",
-    "Description": ["In this course, we'll be building out the entire stack starting from the backend REST API all the way to the frontend iOS and HTML layers. First off, you'll learn how to setup an entirely custom backend component using a popular NodeJS framework called SailsMVC.", "In this course, we'll be building out the entire stack starting from the backend REST API all the way to the frontend iOS and HTML layers. First off, you'll learn how to setup an entirely custom backend component using a popular NodeJS framework called SailsMVC."],
-    "courseFor": ["You want to expand your knowledge outside of iOS", "Learn BAsic OF IOS","Build Career as ios developer"],
+    "Description": [
+      "In this course, we'll be building out the entire stack starting from the backend REST API all the way to the frontend iOS and HTML layers. First off, you'll learn how to setup an entirely custom backend component using a popular NodeJS framework called SailsMVC.",
+      "In this course, we'll be building out the entire stack starting from the backend REST API all the way to the frontend iOS and HTML layers. First off, you'll learn how to setup an entirely custom backend component using a popular NodeJS framework called SailsMVC."
+    ],
+    "courseFor": [
+      "You want to expand your knowledge outside of iOS",
+      "Learn BAsic OF IOS",
+      "Build Career as ios developer"
+    ],
     "Requirements": ["You want to expand your knowledge outside of iOS", "Programmatic UI", "JSON Fetching"]
   },
   {
@@ -57,17 +72,32 @@
     "Name": "Make Ios App",
     "ImgUrl": "images/I5.png",
     "Price": "119",
-    "Description": ["hello", "hello"],
-    "courseFor": ["hello", "hello"],
-    "Requirements": ["hello", "hello"]
+    "Description": [
+      "If you're looking to become an iOS developer or work on Front End Development, you're going to have to learn how to Create, Read, Update, and Delete objects. These four operations are referred to as CRUD operations in the software development world. Understanding how to pass objects around from screen to screen and perform updates and deletes to the database is an essential skill for any developer.",
+      "As a professional developer with experience training interns into wonderful Software Developers, I've come up with the perfect amount of lessons to get you up to speed. These fundamental skills are what you need to progress further in your development career."
+    ],
+    "courseFor": [
+      "You want to learn Core Data through practical examples",
+      "You have struggled with bad instructors and confusing courses online about this subject",
+      "You need guidance on how to become a professional developer",
+      "You want to advance your programming skills",
+      "You want to learn from a Lead Software Engineer with real-world experience"
+    ],
+    "Requirements": ["-------"]
   },
   {
     "Id": "6",
     "Name": "Full Stack Crash Course With Api",
     "ImgUrl": "images/I11.jpeg",
     "Price": "119",
-    "Description": ["hello", "hello"],
-    "courseFor": ["hello", "hello"],
-    "Requirements": ["hello", "hello"]
+    "Description": ["-------"],
+    "courseFor": [
+      "You want to learn Core Data through practical examples",
+      "You have struggled with bad instructors and confusing courses online about this subject",
+      "You need guidance on how to become a professional developer",
+      "You want to advance your programming skills",
+      "You want to learn from a Lead Software Engineer with real-world experience"
+    ],
+    "Requirements": ["-------"]
   }
 ]
