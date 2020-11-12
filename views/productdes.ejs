@@ -1,0 +1,80 @@
+<div class="container own-font">
+  <hr />
+  <% data.forEach(course=>{ %> 
+	<div style="margin-top:100px;">
+		<div class="d-flex bd-highlight">
+			  <div class="p-2 flex-fill bd-highlight">
+				  <img src="<%= course.ImgUrl %>" style="height:300px;">
+			  </div>
+			  <div class="p-2 flex-fill bd-highlight">
+				  <span style="font-style: italic; font-weight: 1000"><%= course.Name %></span>
+				  <br>
+				  <a style="font-weight: 700">
+					  Buy Now
+				  </a>
+				  <br>
+				  <button type="button" onclick="paynow('<%= course.Name%>','<%= course.Price%>','<%= course.ImgUrl%>')"  class="btn btn-primary">$<%= course.Price%></button>
+	
+			  </div>
+			  
+		</div>
+	<hr>
+	<div>
+		
+	<ul>
+		<a style="font-weight: 800">Description</a>
+		<% for(let descr of course.Description ) { %>
+			<li><%= descr %></li>
+		<% } %>
+	<li style="font-weight: 900">Who is this course for?</li>
+	<% for(let cf of course.courseFor ) { %>
+		<li><%= cf %></li>
+	<% } %>
+	<li>Requirements</li>
+	<% for(let req of course.Requirements ) { %>
+		<li><%= req %></li>
+	<% } %>
+	</ul>
+	<ul>
+		<li style="font-weight: 900">Return/Refund Policy</li>
+		<li>Non Refundable</li>
+		<li>Once You Enroll Ehe Course You Can Access Lifetime But You Can't Cancel The Course</li>
+		
+	</ul>
+	
+		</p>
+	</div>
+ <% })%>
+</div>
+<script>
+	// Create an instance of the Stripe object with your publishable API key
+
+	var stripe = Stripe('<%=publicKey%>');
+   function paynow(name,amount,image){
+  fetch("/create-session", {
+      method: "POST",
+      headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  },
+      body: JSON.stringify({Name:name,Amount:amount,Image:image})
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (session) {
+        return stripe.redirectToCheckout({ sessionId: session.id });
+      })
+      .then(function (result) {
+        // If redirectToCheckout fails due to a browser or network
+        // error, you should display the localized error message to your
+        // customer using error.message.
+        if (result.error) {
+          alert(result.error.message);
+        }
+      })
+      .catch(function (error) {
+        console.error("Error:", error);
+      });
+   }
+  </script>

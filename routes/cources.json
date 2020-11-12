@@ -1,0 +1,73 @@
+[
+  {
+    "Id": "1",
+    "Name": "SwiftUI Mastery Travel Discovery",
+    "ImgUrl": "images/I8.jpg",
+    "Price": "119",
+    "Description": [
+      "SwiftUI is now in its second iteration and available for developers through Xcode 12. In this course, I'd like to teach you how to develop a real world application utilizing this new framework. Much of the following lessons will go through the topics of laying out UI and filling the screen with dynamic data.",
+      "Where does the data come from? All screens are populated by JSON that will be provided for each lesson."
+    ],
+    "courseFor": [
+      "You want to explore the limits of SwiftUI",
+      "You want to build applications quickly and correctly",
+      "You want to learn about Reactive State Programming",
+      "You want to go through real world examples of View Models"
+    ],
+    "Requirements": ["Xcode 12+", "Some basic understanding of SwiftUI", "JSON Fetching"]
+  },
+  {
+    "Id": "2",
+    "Name": "Learn Objective with C",
+    "ImgUrl": "images/I2.jpg",
+    "Price": "119",
+    "Description": ["hello", "hello"],
+    "courseFor": ["hello", "hello"],
+    "Requirements": ["hello", "hello"]
+  },
+  {
+    "Id": "3",
+    "Name": "Full Crash Course",
+    "ImgUrl": "images/I9.png",
+    "Price": "98",
+    "Description": ["In this course, we'll be building out the entire stack starting from the backend REST API all the way to the frontend iOS and HTML layers. First off, you'll learn how to setup an entirely custom backend component using a popular NodeJS framework called SailsMVC.", "In this course, we'll be building out the entire stack starting from the backend REST API all the way to the frontend iOS and HTML layers. First off, you'll learn how to setup an entirely custom backend component using a popular NodeJS framework called SailsMVC."],
+    "courseFor": ["You want to expand your knowledge outside of iOS", "Learn BAsic OF IOS","Build Career as ios developer"],
+    "Requirements": ["You want to expand your knowledge outside of iOS", "Programmatic UI", "JSON Fetching"]
+  },
+  {
+    "Id": "4",
+    "Name": "Learn swift",
+    "ImgUrl": "images/I4.jpg",
+    "Price": "88",
+    "Description": [
+      "Once you get up to speed, we'll move onto constructing all of the apps using the brand new SwiftUI framework with reactive style programming.",
+      "We'll also go over advanced techniques of setting up EnvironmentObjects to make sure your application behavior can be observed properly.",
+      "Responding to changes to variables is key to SwiftUI development so we'll go through a lot of best practices in this course."
+    ],
+    "courseFor": [
+      "Swift basic",
+      "Effective learning ",
+      "basic knowledge",
+      "Responding to changes to variables is key to SwiftUI development"
+    ],
+    "Requirements": ["You want to expand your knowledge outside of iOS", "Programmatic UI", "JSON Fetching"]
+  },
+  {
+    "Id": "5",
+    "Name": "Make Ios App",
+    "ImgUrl": "images/I5.png",
+    "Price": "119",
+    "Description": ["hello", "hello"],
+    "courseFor": ["hello", "hello"],
+    "Requirements": ["hello", "hello"]
+  },
+  {
+    "Id": "6",
+    "Name": "Full Stack Crash Course With Api",
+    "ImgUrl": "images/I11.jpeg",
+    "Price": "119",
+    "Description": ["hello", "hello"],
+    "courseFor": ["hello", "hello"],
+    "Requirements": ["hello", "hello"]
+  }
+]

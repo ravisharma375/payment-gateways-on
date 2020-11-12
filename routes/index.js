@@ -4,6 +4,7 @@ require("dotenv").config();
 
 // WARNING: Add a Stripe Key
 const stripe = require("stripe")(process.env.SECRET_KEY);
+const Data = require("./cources.json");
 
 //post register
 // router.post("/register", async function(req, res) {
@@ -99,30 +100,44 @@ const stripe = require("stripe")(process.env.SECRET_KEY);
 // });
 /* GET home page. */
 router.get("/", function(req, res, next) {
-  res.render("index", { title: "Express", publicKey: process.env.PUBLISHABLE_KEY });
+  res.render("layout", {
+    page: "index",
+    title: "Express",
+    DataCourses: Data,
+    publicKey: process.env.PUBLISHABLE_KEY,
+  });
+});
+router.get("/productcart", function(req, res, next) {
+  const id = req.query.ID;
+  const data = Data.filter(x => {
+    if (x.Id == id) {
+      return x;
+    }
+  });
+  console.log(data);
+  return res.render("layout", {
+    page: "productdes",
+    data,
+    publicKey: process.env.PUBLISHABLE_KEY,
+  });
 });
 var YOUR_DOMAIN = process.env.YOUR_DOMAIN;
 router.get("/success", async (req, res) => {
-  const { sessionId } = req.query;
-  const session = await stripe.checkout.sessions.retrieve(sessionId);
-  const orderData = {
-    order_id: session.id,
-    customer_id: session.customer,
-    payment_type: session.payment_method_types[0],
-    payment_status: session.payment_status,
-    amount: session.amount_total / 100 + "₹",
-  };
-  return res.json(orderData);
+  // const { sessionId } = req.query;
+  // const session = await stripe.checkout.sessions.retrieve(sessionId);
+  // const orderData = {
+  //   order_id: session.id,
+  //   customer_id: session.customer,
+  //   payment_type: session.payment_method_types[0],
+  //   payment_status: session.payment_status,
+  //   amount: session.amount_total / 100 + "₹",
+  // };
+  // return res.json(orderData);
   res.render("success");
 });
 router.post("/create-session", async (req, res) => {
   const { body } = req;
   console.log(body);
-  // const data = {
-  //   productName: body.product_name,
-  //   amount: body.amount,
-  //   quantity: body.quantity_number,
-  // };
   const session = await stripe.checkout.sessions.create({
     submit_type: "pay",
     billing_address_collection: "auto",
@@ -130,12 +145,12 @@ router.post("/create-session", async (req, res) => {
     line_items: [
       {
         price_data: {
-          currency: "INR",
+          currency: "USD",
           product_data: {
-            name: "Stubborn Attachments",
-            images: ["https://i.imgur.com/EHyR2nP.png"],
+            name: body.Name,
+            images: [`${YOUR_DOMAIN}/${body.Image}`],
           },
-          unit_amount: body.amount * 100,
+          unit_amount: body.Amount * 100,
         },
         quantity: 1,
       },
