@@ -99,7 +99,7 @@ const Data = require("./cources.json");
 //   });
 // });
 /* GET home page. */
-router.get("/", function(req, res, next) {
+router.get("/", function (req, res, next) {
   res.render("layout", {
     page: "index",
     title: "Express",
@@ -107,9 +107,9 @@ router.get("/", function(req, res, next) {
     publicKey: process.env.PUBLISHABLE_KEY,
   });
 });
-router.get("/productcart", function(req, res, next) {
+router.get("/productcart", function (req, res, next) {
   const id = req.query.ID;
-  const data = Data.filter(x => {
+  const data = Data.filter((x) => {
     if (x.Id == id) {
       return x;
     }
@@ -162,4 +162,6 @@ router.post("/create-session", async (req, res) => {
   console.log(session);
   res.json({ id: session.id });
 });
+
+console.log(process.env.PORT);
 module.exports = router;
