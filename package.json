@@ -13,7 +13,7 @@
     "npm": ">=6.12.0 <7.0.0"
   },
   "scripts": {
-    "start:dev": "set NODE_ENV=development && nodemon ./bin/www",
+    "start": "set NODE_ENV=development && nodemon ./bin/www",
     "start:debug": "nodemon --inspect .",
     "start:prod": "set NODE_ENV=production && pm2 start ./bin/www",
     "test": "jest"
