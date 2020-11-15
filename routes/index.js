@@ -123,8 +123,12 @@ router.get("/productcart", function (req, res, next) {
 });
 var YOUR_DOMAIN = process.env.YOUR_DOMAIN;
 router.get("/success", async (req, res) => {
-  // const { sessionId } = req.query;
-  // const session = await stripe.checkout.sessions.retrieve(sessionId);
+  const { sessionId } = req.query;
+  if (!sessionId && sessionId == undefined) {
+    return res.render("404");
+  }
+  const session = await stripe.checkout.sessions.retrieve(sessionId);
+
   // const orderData = {
   //   order_id: session.id,
   //   customer_id: session.customer,
@@ -172,4 +176,19 @@ router.get("/upcoming", (req, res) => {
     page: "upcoming",
   });
 });
-module.exports = router;
+router.get("/cancel", async (req, res) => {
+  const { sessionId } = req.query;
+  if (!sessionId && sessionId == undefined) {
+    return res.render("404");
+  }
+  const session = await stripe.checkout.sessions.retrieve(sessionId);
+
+  return res.render("layout", {
+    page: "cancel",
+    id: session.id,
+  });
+});
+router.get("/404", async (req, res) => {
+  return res.render("404");
+});
+  module.exports = router;
