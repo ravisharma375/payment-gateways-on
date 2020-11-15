@@ -161,7 +161,7 @@ router.post("/create-session", async (req, res) => {
     ],
     mode: "payment",
     success_url: `${YOUR_DOMAIN}/success?sessionId={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${YOUR_DOMAIN}/cancel`,
+    cancel_url: `${YOUR_DOMAIN}/cancel?sessionId={CHECKOUT_SESSION_ID}`,
   });
   console.log(session);
   res.json({ id: session.id });
@@ -191,4 +191,4 @@ router.get("/cancel", async (req, res) => {
 router.get("/404", async (req, res) => {
   return res.render("404");
 });
-  module.exports = router;
+module.exports = router;
