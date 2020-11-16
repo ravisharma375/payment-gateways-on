@@ -2,9 +2,9 @@
   <hr />
   <% data.forEach(course=>{ %> 
 	<div style="margin-top:100px;">
-		<div class="d-flex bd-highlight">
+		<div id="dynamicId" class="d-flex bd-highlight">
 			  <div class="p-2 flex-fill bd-highlight">
-				  <img src="<%= course.ImgUrl %>" style="height:300px;">
+				  <img src="<%= course.ImgUrl %>" class="card-img-top ">
 			  </div>
 			  <div class="p-2 flex-fill bd-highlight">
 				  <span style="font-style: italic; font-weight: 1000"><%= course.Name %></span>
@@ -47,6 +47,12 @@
  <% })%>
 </div>
 <script>
+if (window.matchMedia('(max-width: 694px)').matches)
+    {
+
+		var element = document.getElementById("dynamicId");
+          element.classList.remove("d-flex");
+    }
 	// Create an instance of the Stripe object with your publishable API key
 
 	var stripe = Stripe('<%=publicKey%>');
