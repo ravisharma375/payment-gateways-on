@@ -5,7 +5,6 @@ require("dotenv").config();
 // WARNING: Add a Stripe Key
 const stripe = require("stripe")(process.env.SECRET_KEY);
 const Data = require("./cources.json");
-
 //post register
 // router.post("/register", async function(req, res) {
 //   const { email, password } = req.body;
@@ -142,9 +141,8 @@ router.get("/success", async (req, res) => {
 router.post("/create-session", async (req, res) => {
   const { body } = req;
   console.log(body);
+
   const session = await stripe.checkout.sessions.create({
-    submit_type: "pay",
-    billing_address_collection: "auto",
     payment_method_types: ["card"],
     line_items: [
       {
@@ -191,4 +189,5 @@ router.get("/cancel", async (req, res) => {
 router.get("/404", async (req, res) => {
   return res.render("404");
 });
+
 module.exports = router;

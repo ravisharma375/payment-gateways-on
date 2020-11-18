@@ -3,7 +3,7 @@
     "Id": "1",
     "Name": "SwiftUI Mastery Travel Discovery",
     "ImgUrl": "images/I8.jpg",
-    "Price": "119",
+    "Price": "2",
     "Description": [
       "SwiftUI is now in its second iteration and available for developers through Xcode 12. In this course, I'd like to teach you how to develop a real world application utilizing this new framework. Much of the following lessons will go through the topics of laying out UI and filling the screen with dynamic data.",
       "Where does the data come from? All screens are populated by JSON that will be provided for each lesson."
@@ -20,7 +20,7 @@
     "Id": "2",
     "Name": "Learn Objective with C",
     "ImgUrl": "images/I2.jpg",
-    "Price": "119",
+    "Price": "20",
     "Description": [
       "An App Is Built from a Network of Objects When building apps for OS X or iOS, youтАЩll spend most of your time working with objects. Those objects are instances of Objective-C classes, some of which are provided for you by Cocoa or Cocoa Touch and some of which youтАЩll write yourself. If youтАЩre writing your own class, start by providing a description of the class that details the intended public interface to instances of the class. This interface includes the public properties to encapsulate relevant data, along with a list of methods. Method declarations indicate the messages that an object can receive, and include information about the parameters required whenever the method is called. YouтАЩll also provide a class implementation, which includes the executable code for each method declared in the interface..",
       "Objective-C is a general-purpose, object-oriented programming language that adds Smalltalk-style messaging to the C programming language."
@@ -37,7 +37,7 @@
     "Id": "3",
     "Name": "Full Crash Course",
     "ImgUrl": "images/I9.png",
-    "Price": "98",
+    "Price": "40",
     "Description": [
       "In this course, we'll be building out the entire stack starting from the backend REST API all the way to the frontend iOS and HTML layers. First off, you'll learn how to setup an entirely custom backend component using a popular NodeJS framework called SailsMVC.",
       "In this course, we'll be building out the entire stack starting from the backend REST API all the way to the frontend iOS and HTML layers. First off, you'll learn how to setup an entirely custom backend component using a popular NodeJS framework called SailsMVC."
@@ -53,7 +53,7 @@
     "Id": "4",
     "Name": "Learn swift",
     "ImgUrl": "images/I4.jpg",
-    "Price": "88",
+    "Price": "60",
     "Description": [
       "Once you get up to speed, we'll move onto constructing all of the apps using the brand new SwiftUI framework with reactive style programming.",
       "We'll also go over advanced techniques of setting up EnvironmentObjects to make sure your application behavior can be observed properly.",
@@ -71,7 +71,7 @@
     "Id": "5",
     "Name": "Make Ios App",
     "ImgUrl": "images/I5.png",
-    "Price": "119",
+    "Price": "80",
     "Description": [
       "If you're looking to become an iOS developer or work on Front End Development, you're going to have to learn how to Create, Read, Update, and Delete objects. These four operations are referred to as CRUD operations in the software development world. Understanding how to pass objects around from screen to screen and perform updates and deletes to the database is an essential skill for any developer.",
       "As a professional developer with experience training interns into wonderful Software Developers, I've come up with the perfect amount of lessons to get you up to speed. These fundamental skills are what you need to progress further in your development career."
@@ -89,7 +89,7 @@
     "Id": "6",
     "Name": "Full Stack Crash Course With Api",
     "ImgUrl": "images/I11.jpeg",
-    "Price": "119",
+    "Price": "100",
     "Description": ["-------"],
     "courseFor": [
       "You want to learn Core Data through practical examples",
